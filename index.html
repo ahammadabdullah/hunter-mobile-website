@@ -12,10 +12,58 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header></header>
-    <main></main>
+    <header>
+      <h3 class="text-6xl text-center">Phone Hunter</h3>
+    </header>
+    <main>
+      <section>
+        <!-- search bar -->
+        <div class="flex flex-row justify-center">
+          <input
+            class="input input-bordered w-full max-w-xs"
+            id="search-field"
+            type="text"
+            name=""
+            placeholder="Search Here"
+          />
+          <button onclick="handleSearch()" class="btn btn-secondary">
+            search
+          </button>
+        </div>
+        <!-- cards -->
+        <div
+          id="phone-container"
+          class="grid grid-cols-1 md:grid-cols-3 gap-4"
+        ></div>
+        <!-- show all button -->
+        <div id="showAll-container" class="flex justify-center">
+          <button
+            id="showAll-btn"
+            onclick="handleShowAll()"
+            class="btn btn-secondary hidden"
+          >
+            Show All
+          </button>
+        </div>
+      </section>
+      <!-- modal here -->
+      <!-- Open the modal using ID.showModal() method -->
+  
+      <dialog id="showDetailsModal" class="modal modal-bottom sm:modal-middle">
+        <form method="dialog" class="modal-box bg-gray-100">
+          <!-- show-detail-container -->
+          <div id="show-detail-container">
+
+          <div class="modal-action">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn w-16 mx-auto">Close</button>
+          </div>
+        </form>
+      </dialog>
+    </main>
     <footer></footer>
 
     <script src="./scripts/index.js"></script>
   </body>
 </html>
+
